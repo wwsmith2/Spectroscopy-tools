@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C52DCB5118B8293D00A62407 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52DCB5018B8293D00A62407 /* Foundation.framework */; };
+		C52DCB5318B8293D00A62407 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52DCB5218B8293D00A62407 /* CoreGraphics.framework */; };
+		C52DCB5518B8293D00A62407 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52DCB5418B8293D00A62407 /* UIKit.framework */; };
+		C52DCB5B18B8293D00A62407 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C52DCB5918B8293D00A62407 /* InfoPlist.strings */; };
+		C52DCB5D18B8293D00A62407 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DCB5C18B8293D00A62407 /* main.m */; };
+		C52DCB6118B8293D00A62407 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DCB6018B8293D00A62407 /* AppDelegate.m */; };
+		C52DCB6418B8293D00A62407 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52DCB6218B8293D00A62407 /* Main.storyboard */; };
+		C52DCB6718B8293E00A62407 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DCB6618B8293E00A62407 /* ViewController.m */; };
+		C52DCB6918B8293E00A62407 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52DCB6818B8293E00A62407 /* Images.xcassets */; };
+		C52DCB7018B8293E00A62407 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52DCB6F18B8293E00A62407 /* XCTest.framework */; };
+		C52DCB7118B8293E00A62407 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52DCB5018B8293D00A62407 /* Foundation.framework */; };
+		C52DCB7218B8293E00A62407 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C52DCB5418B8293D00A62407 /* UIKit.framework */; };
+		C52DCB7A18B8293E00A62407 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C52DCB7818B8293E00A62407 /* InfoPlist.strings */; };
+		C52DCB7C18B8293E00A62407 /* Spectroscopy_ToolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C52DCB7B18B8293E00A62407 /* Spectroscopy_ToolsTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C52DCB7318B8293E00A62407 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C52DCB4518B8293D00A62407 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C52DCB4C18B8293D00A62407;
+			remoteInfo = "Spectroscopy Tools";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C52DCB4D18B8293D00A62407 /* Spectroscopy Tools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spectroscopy Tools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52DCB5018B8293D00A62407 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C52DCB5218B8293D00A62407 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C52DCB5418B8293D00A62407 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C52DCB5818B8293D00A62407 /* Spectroscopy Tools-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spectroscopy Tools-Info.plist"; sourceTree = "<group>"; };
+		C52DCB5A18B8293D00A62407 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C52DCB5C18B8293D00A62407 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C52DCB5E18B8293D00A62407 /* Spectroscopy Tools-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spectroscopy Tools-Prefix.pch"; sourceTree = "<group>"; };
+		C52DCB5F18B8293D00A62407 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C52DCB6018B8293D00A62407 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C52DCB6318B8293D00A62407 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C52DCB6518B8293E00A62407 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C52DCB6618B8293E00A62407 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C52DCB6818B8293E00A62407 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C52DCB6E18B8293E00A62407 /* Spectroscopy ToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spectroscopy ToolsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52DCB6F18B8293E00A62407 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C52DCB7718B8293E00A62407 /* Spectroscopy ToolsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spectroscopy ToolsTests-Info.plist"; sourceTree = "<group>"; };
+		C52DCB7918B8293E00A62407 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C52DCB7B18B8293E00A62407 /* Spectroscopy_ToolsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Spectroscopy_ToolsTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C52DCB4A18B8293D00A62407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52DCB5318B8293D00A62407 /* CoreGraphics.framework in Frameworks */,
+				C52DCB5518B8293D00A62407 /* UIKit.framework in Frameworks */,
+				C52DCB5118B8293D00A62407 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52DCB6B18B8293E00A62407 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52DCB7018B8293E00A62407 /* XCTest.framework in Frameworks */,
+				C52DCB7218B8293E00A62407 /* UIKit.framework in Frameworks */,
+				C52DCB7118B8293E00A62407 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C52DCB4418B8293D00A62407 = {
+			isa = PBXGroup;
+			children = (
+				C52DCB5618B8293D00A62407 /* Spectroscopy Tools */,
+				C52DCB7518B8293E00A62407 /* Spectroscopy ToolsTests */,
+				C52DCB4F18B8293D00A62407 /* Frameworks */,
+				C52DCB4E18B8293D00A62407 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C52DCB4E18B8293D00A62407 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C52DCB4D18B8293D00A62407 /* Spectroscopy Tools.app */,
+				C52DCB6E18B8293E00A62407 /* Spectroscopy ToolsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C52DCB4F18B8293D00A62407 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C52DCB5018B8293D00A62407 /* Foundation.framework */,
+				C52DCB5218B8293D00A62407 /* CoreGraphics.framework */,
+				C52DCB5418B8293D00A62407 /* UIKit.framework */,
+				C52DCB6F18B8293E00A62407 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C52DCB5618B8293D00A62407 /* Spectroscopy Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C52DCB5F18B8293D00A62407 /* AppDelegate.h */,
+				C52DCB6018B8293D00A62407 /* AppDelegate.m */,
+				C52DCB6218B8293D00A62407 /* Main.storyboard */,
+				C52DCB6518B8293E00A62407 /* ViewController.h */,
+				C52DCB6618B8293E00A62407 /* ViewController.m */,
+				C52DCB6818B8293E00A62407 /* Images.xcassets */,
+				C52DCB5718B8293D00A62407 /* Supporting Files */,
+			);
+			path = "Spectroscopy Tools";
+			sourceTree = "<group>";
+		};
+		C52DCB5718B8293D00A62407 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C52DCB5818B8293D00A62407 /* Spectroscopy Tools-Info.plist */,
+				C52DCB5918B8293D00A62407 /* InfoPlist.strings */,
+				C52DCB5C18B8293D00A62407 /* main.m */,
+				C52DCB5E18B8293D00A62407 /* Spectroscopy Tools-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C52DCB7518B8293E00A62407 /* Spectroscopy ToolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				C52DCB7B18B8293E00A62407 /* Spectroscopy_ToolsTests.m */,
+				C52DCB7618B8293E00A62407 /* Supporting Files */,
+			);
+			path = "Spectroscopy ToolsTests";
+			sourceTree = "<group>";
+		};
+		C52DCB7618B8293E00A62407 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C52DCB7718B8293E00A62407 /* Spectroscopy ToolsTests-Info.plist */,
+				C52DCB7818B8293E00A62407 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C52DCB4C18B8293D00A62407 /* Spectroscopy Tools */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52DCB7F18B8293E00A62407 /* Build configuration list for PBXNativeTarget "Spectroscopy Tools" */;
+			buildPhases = (
+				C52DCB4918B8293D00A62407 /* Sources */,
+				C52DCB4A18B8293D00A62407 /* Frameworks */,
+				C52DCB4B18B8293D00A62407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spectroscopy Tools";
+			productName = "Spectroscopy Tools";
+			productReference = C52DCB4D18B8293D00A62407 /* Spectroscopy Tools.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C52DCB6D18B8293E00A62407 /* Spectroscopy ToolsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52DCB8218B8293E00A62407 /* Build configuration list for PBXNativeTarget "Spectroscopy ToolsTests" */;
+			buildPhases = (
+				C52DCB6A18B8293E00A62407 /* Sources */,
+				C52DCB6B18B8293E00A62407 /* Frameworks */,
+				C52DCB6C18B8293E00A62407 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C52DCB7418B8293E00A62407 /* PBXTargetDependency */,
+			);
+			name = "Spectroscopy ToolsTests";
+			productName = "Spectroscopy ToolsTests";
+			productReference = C52DCB6E18B8293E00A62407 /* Spectroscopy ToolsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C52DCB4518B8293D00A62407 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = WSmithConsulting;
+				TargetAttributes = {
+					C52DCB6D18B8293E00A62407 = {
+						TestTargetID = C52DCB4C18B8293D00A62407;
+					};
+				};
+			};
+			buildConfigurationList = C52DCB4818B8293D00A62407 /* Build configuration list for PBXProject "Spectroscopy Tools" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C52DCB4418B8293D00A62407;
+			productRefGroup = C52DCB4E18B8293D00A62407 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C52DCB4C18B8293D00A62407 /* Spectroscopy Tools */,
+				C52DCB6D18B8293E00A62407 /* Spectroscopy ToolsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C52DCB4B18B8293D00A62407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52DCB6918B8293E00A62407 /* Images.xcassets in Resources */,
+				C52DCB5B18B8293D00A62407 /* InfoPlist.strings in Resources */,
+				C52DCB6418B8293D00A62407 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52DCB6C18B8293E00A62407 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52DCB7A18B8293E00A62407 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C52DCB4918B8293D00A62407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52DCB6718B8293E00A62407 /* ViewController.m in Sources */,
+				C52DCB6118B8293D00A62407 /* AppDelegate.m in Sources */,
+				C52DCB5D18B8293D00A62407 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C52DCB6A18B8293E00A62407 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C52DCB7C18B8293E00A62407 /* Spectroscopy_ToolsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C52DCB7418B8293E00A62407 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C52DCB4C18B8293D00A62407 /* Spectroscopy Tools */;
+			targetProxy = C52DCB7318B8293E00A62407 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C52DCB5918B8293D00A62407 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52DCB5A18B8293D00A62407 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C52DCB6218B8293D00A62407 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52DCB6318B8293D00A62407 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C52DCB7818B8293E00A62407 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C52DCB7918B8293E00A62407 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C52DCB7D18B8293E00A62407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C52DCB7E18B8293E00A62407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C52DCB8018B8293E00A62407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spectroscopy Tools/Spectroscopy Tools-Prefix.pch";
+				INFOPLIST_FILE = "Spectroscopy Tools/Spectroscopy Tools-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C52DCB8118B8293E00A62407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spectroscopy Tools/Spectroscopy Tools-Prefix.pch";
+				INFOPLIST_FILE = "Spectroscopy Tools/Spectroscopy Tools-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C52DCB8318B8293E00A62407 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Spectroscopy Tools.app/Spectroscopy Tools";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spectroscopy Tools/Spectroscopy Tools-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Spectroscopy ToolsTests/Spectroscopy ToolsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C52DCB8418B8293E00A62407 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Spectroscopy Tools.app/Spectroscopy Tools";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spectroscopy Tools/Spectroscopy Tools-Prefix.pch";
+				INFOPLIST_FILE = "Spectroscopy ToolsTests/Spectroscopy ToolsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C52DCB4818B8293D00A62407 /* Build configuration list for PBXProject "Spectroscopy Tools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52DCB7D18B8293E00A62407 /* Debug */,
+				C52DCB7E18B8293E00A62407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C52DCB7F18B8293E00A62407 /* Build configuration list for PBXNativeTarget "Spectroscopy Tools" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52DCB8018B8293E00A62407 /* Debug */,
+				C52DCB8118B8293E00A62407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C52DCB8218B8293E00A62407 /* Build configuration list for PBXNativeTarget "Spectroscopy ToolsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52DCB8318B8293E00A62407 /* Debug */,
+				C52DCB8418B8293E00A62407 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C52DCB4518B8293D00A62407 /* Project object */;
+}
