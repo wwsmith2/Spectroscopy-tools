@@ -2,7 +2,7 @@
 //  LineWidthResolution.m
 //  Spectroscopy Tools
 //
-//  Created by ldierker on 3/18/14.
+//  Created by Wayne Smith on 3/18/14.
 //  Copyright (c) 2014 WSmithConsulting. All rights reserved.
 //
 
@@ -13,6 +13,8 @@
 @end
 
 @implementation LineWidthResolution
+
+@synthesize centerWavelengthTextbox, linewidthTextbox;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +29,41 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
+                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                           [[UIBarButtonItem alloc]initWithTitle:@"Enter" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                           nil];
+    [numberToolbar sizeToFit];
+    centerWavelengthTextbox.inputAccessoryView = numberToolbar;
+    linewidthTextbox.inputAccessoryView = numberToolbar;
+
 }
+
+-(void)cancelNumberPad{
+    [centerWavelengthTextbox resignFirstResponder];
+    [linewidthTextbox resignFirstResponder];
+    
+}
+
+-(void)doneWithNumberPad{
+    
+    [linewidthTextbox  resignFirstResponder];
+    [centerWavelengthTextbox resignFirstResponder];
+}
+
+
+- (IBAction)calculateCM:(id)sender {
+    float CenterWavelength = [self.centerWavelengthTextbox.text floatValue];
+    float LineWidth = [self.linewidthTextbox.text floatValue];
+    float CM = 10000000 * LineWidth / pow(CenterWavelength, 2);
+    
+    self.wavenumberTextbox.text = [NSString stringWithFormat:@"%.3f", CM];
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -46,4 +82,13 @@
 }
 */
 
+- (IBAction)calculateWavenumberButton:(id)sender {
+    
+    float CenterWavelength = [self.centerWavelengthTextbox.text floatValue];
+    float LineWidth = [self.linewidthTextbox.text floatValue];
+    float CM = 10000000 * LineWidth / pow(CenterWavelength, 2);
+    
+    self.wavenumberTextbox.text = [NSString stringWithFormat:@"%.3f", CM];
+    
+}
 @end

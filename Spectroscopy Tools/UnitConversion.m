@@ -23,28 +23,89 @@
     return self;
 }
 
+@synthesize valueTextField, convertedValue, unitValue;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-}
-
-
-//- (IBAction)wavenumbers:(id)sender {
-  
-   // float CM = [self.wavenumbers.text floatvalue];
-    //float NM = CM / 10000000;
-    //self.nanometers.text = [NSString stringWithFormat:@"%.2f", NM];
     
-//}
-
-- (IBAction)nanometer:(id)sender {
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIBarStyleBlackTranslucent;
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
+                           [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
+                           [[UIBarButtonItem alloc]initWithTitle:@"Enter" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                           nil];
+    [numberToolbar sizeToFit];
+    valueTextField.inputAccessoryView = numberToolbar;
+    
 }
 
-- (IBAction)microns:(id)sender {
+-(void)cancelNumberPad{
+    [valueTextField resignFirstResponder];
+    
+ //   self.valueTextField.text = @"";
+ //   self.convertedValue = @"";
+//    self.units.text = @"nm";
 }
 
+-(void)doneWithNumberPad{
+    
+    [valueTextField resignFirstResponder];
+    
+    float tempValue =  [self.valueTextField.text floatValue];
+    float CM;
+    float NM;
+    
+    switch (unitValue.selectedSegmentIndex) {
+        case 0:  //nm
 
+            // converting nm to cm-1
+            NM = (1 / tempValue) * 10000000;
+            self.convertedValue.text = [NSString stringWithFormat:@"%.3f", NM];
+            self.units.text = [NSString stringWithFormat:@"cm-1"];
+            
+            break;
+        case 1:  // cm-1
+            
+            // converting cm-1 to nm
+            CM = (1 / tempValue) * 10000000;
+            self.convertedValue.text = [NSString stringWithFormat:@"%.3f", CM];
+            self.units.text = [NSString stringWithFormat:@"nm"];
+            
+            break;
+            
+        default:
+            break;
+    }
+    
+
+    
+    
+}
+
+- (IBAction)unitValueChange:(id)sender {
+    
+    self.valueTextField.text = @"";
+    self.convertedValue.text = @"";
+    
+    switch (unitValue.selectedSegmentIndex) {
+        case 0:
+            // converting nm to cm-1
+            self.units.text = [NSString stringWithFormat:@"cm-1"];
+            break;
+
+        case 1:
+            // converting cm-1 to nm
+            self.units.text = [NSString stringWithFormat:@"nm"];
+            break;
+            
+        default:
+            break;
+    }
+    
+}
 
 - (void)didReceiveMemoryWarning
 {

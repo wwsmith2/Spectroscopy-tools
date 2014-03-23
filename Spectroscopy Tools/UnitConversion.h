@@ -2,7 +2,7 @@
 //  UnitConversion.h
 //  Spectroscopy Tools
 //
-//  Created by ldierker on 3/18/14.
+//  Created by Wayne Smith on 3/18/14.
 //  Copyright (c) 2014 WSmithConsulting. All rights reserved.
 //
 
@@ -10,10 +10,12 @@
 
 @interface UnitConversion : UIViewController
 
-@property (strong, nonatomic) IBOutlet UITextField *wavenumbers;
+@property (strong, nonatomic) IBOutlet UITextField *valueTextField;
 
-@property (strong, nonatomic) IBOutlet UITextField *nanometers;
+@property (strong, nonatomic) IBOutlet UITextField *convertedValue;
 
-@property (strong, nonatomic) IBOutlet UITextField *microns;
+@property (strong, nonatomic) IBOutlet UILabel *units;
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *unitValue;
 
 @end
