@@ -14,7 +14,7 @@
 
 @implementation LineWidthResolution
 
-@synthesize centerWavelengthTextbox, linewidthTextbox;
+//@synthesize centerWavelengthTextbox, linewidthTextbox;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,26 +32,30 @@
     UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
     numberToolbar.barStyle = UIBarStyleBlackTranslucent;
     numberToolbar.items = [NSArray arrayWithObjects:
-                           [[UIBarButtonItem alloc]initWithTitle:@"Cancel" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
+                           [[UIBarButtonItem alloc]initWithTitle:@"Clear" style:UIBarButtonItemStyleBordered target:self action:@selector(cancelNumberPad)],
                            [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
                            [[UIBarButtonItem alloc]initWithTitle:@"Enter" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
                            nil];
     [numberToolbar sizeToFit];
-    centerWavelengthTextbox.inputAccessoryView = numberToolbar;
-    linewidthTextbox.inputAccessoryView = numberToolbar;
+    _centerWavelengthTextbox.inputAccessoryView = numberToolbar;
+    _linewidthTextbox.inputAccessoryView = numberToolbar;
 
 }
 
 -(void)cancelNumberPad{
-    [centerWavelengthTextbox resignFirstResponder];
-    [linewidthTextbox resignFirstResponder];
+//    [_centerWavelengthTextbox resignFirstResponder];
+//    [_linewidthTextbox resignFirstResponder];
+
+    self.centerWavelengthTextbox.text = @"";
+    self.linewidthTextbox.text = @"";
+    
     
 }
 
 -(void)doneWithNumberPad{
     
-    [linewidthTextbox  resignFirstResponder];
-    [centerWavelengthTextbox resignFirstResponder];
+    [_linewidthTextbox  resignFirstResponder];
+    [_centerWavelengthTextbox resignFirstResponder];
 }
 
 

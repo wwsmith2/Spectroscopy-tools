@@ -79,17 +79,15 @@
     
     
     // calculate the resolution factor
-    // if Slit Width / Pixel ~1 then 3.0 pixels are needed
-    // if Slit Width / Pixel ~2 then 2.5 pixels are needed
-    // if Slit Width / Pixel ~3 then 2.0 pixels are needed
-    // if Slit Width / Pixel ~4 then 1.5 pixels are needed
+    // if (SlitWidth / PixelWidth) ~1 then 3.0 pixels are needed
+    // if (SlitWidth / PixelWidth) ~2 then 2.5 pixels are needed
+    // if (SlitWidth / PixelWidth) ~3 then 2.0 pixels are needed
+    // if (SlitWidth / PixelWidth) ~4 then 1.5 pixels are needed
     // we can use an equation to estimate this
     float resolutionFactor = ((-0.5) * (slitWidth / pixWidth)) + 3.5;
     
     resolutionNM = resolutionFactor * (waveEnd - waveBegin)*slitWidth / (numPixels * pixWidth);
-    
     resolutionCM = 10000000 * resolutionNM / pow(centerWavelength, 2);
-    
     
     self.textboxResolutionNM.text = [NSString stringWithFormat:@"%.2f", resolutionNM];
     self.textboxResolutionCM.text = [NSString stringWithFormat:@"%.2f", resolutionCM];

@@ -13,6 +13,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+
+    // sleep for 2 seconds so we can see the launch screen.
+    sleep(2);
     return YES;
 }
 							
