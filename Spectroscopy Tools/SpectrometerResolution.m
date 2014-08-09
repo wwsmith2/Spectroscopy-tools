@@ -11,10 +11,11 @@
 @interface SpectrometerResolution ()
 
 //@synthesize textboxWavelengthBegin, textboxWavelengthEnd, textboxNumberPixels, textboxPixelWidth, textboxSlitWidth, textboxResolutionNM, textboxResolutionCM;
-
 @end
 
+
 @implementation SpectrometerResolution
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,10 +44,99 @@
     _textboxNumberPixels.inputAccessoryView = numberToolbar;
     _textboxPixelWidth.inputAccessoryView = numberToolbar;
     _textboxSlitWidth.inputAccessoryView = numberToolbar;
-
     
-
 }
+
+#define k_KEYBOARD_OFFSET 75.0
+
+-(void)keyboardWillAppear {
+    
+    // Move current view up / down with Animation
+    if (self.view.frame.origin.y >= 0)
+    {
+        [self moveViewUp:YES];
+    }
+    else if (self.view.frame.origin.y < 0)
+    {
+        [self moveViewUp:NO];
+    }
+    
+}
+
+-(void)keyboardWillDisappear {
+    if (self.view.frame.origin.y >= 0)
+    {
+        [self moveViewUp:YES];
+    }
+    else if (self.view.frame.origin.y < 0)
+    {
+        [self moveViewUp:NO];
+    }
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)sender
+{
+    if ([sender isEqual:_textboxWavelengthBegin]) // txtEmail is UITextField control for email address
+    {
+        //move the main view up, so the keyboard will not hide it.
+        if  (self.view.frame.origin.y >= 0)
+        {
+            [self moveViewUp:YES];
+        }
+    }
+}
+
+//Custom method to move the view up/down whenever the keyboard is appeared / disappeared
+-(void)moveViewUp:(BOOL)bMovedUp
+{
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:0.4]; // to slide the view up
+    
+    CGRect rect = self.view.frame;
+    if (bMovedUp) {
+        // 1. move the origin of view up so that the text field will come above the keyboard
+        rect.origin.y -= k_KEYBOARD_OFFSET;
+        
+        // 2. increase the height of the view to cover up the area behind the keyboard
+        rect.size.height += k_KEYBOARD_OFFSET;
+    } else {
+        // revert to normal state of the view.
+        rect.origin.y += k_KEYBOARD_OFFSET;
+        rect.size.height -= k_KEYBOARD_OFFSET;
+    }
+    
+    self.view.frame = rect;
+    
+    [UIView commitAnimations];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    // register keyboard notifications to appear / disappear the keyboard
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillAppear)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillDisappear)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    // unregister for keyboard notifications while moving to the other screen.
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+}
+
+
 
 -(void)cancelNumberPad{
     [_textboxWavelengthBegin resignFirstResponder];
@@ -92,6 +182,7 @@
     self.textboxResolutionNM.text = [NSString stringWithFormat:@"%.2f", resolutionNM];
     self.textboxResolutionCM.text = [NSString stringWithFormat:@"%.2f", resolutionCM];
 }
+
 
 - (void)didReceiveMemoryWarning
 {

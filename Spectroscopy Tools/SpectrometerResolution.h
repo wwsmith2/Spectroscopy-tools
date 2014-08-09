@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+    CGFloat animatedDistance;
+
 @interface SpectrometerResolution : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIButton *btnCalculateResolution;
@@ -19,4 +21,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *textboxResolutionNM;
 @property (strong, nonatomic) IBOutlet UITextField *textboxResolutionCM;
 
+
 @end
+
